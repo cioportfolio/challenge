@@ -7,6 +7,13 @@
     <style>
         .bug {
             border-color: red;
+            background-color: white;
+        }
+        #bugs {
+            background-color: #eeeeee;
+        }
+        #errors {
+            color: red;
         }
     </style>
 </head>
@@ -18,7 +25,7 @@
     <div id='challenge' style="display: none;">
         <p>Fix the bugs in the code to get the combination and open your present</p>
         <h2>Errors</h2>
-        <div id='errors' style='color: red;'>
+        <div id='errors'>
         </div>
         <h2>JavaScript Code</h2>
         <div>
@@ -118,7 +125,7 @@ return "WRONG NAME";`
                 document.querySelector('#combination').textContent = r;
                 document.querySelector('#errors').textContent = '';
             } catch (e) {
-                document.querySelector('#combination').innerHTML = "<b style='color:red;'>Oh no bugs!</b>";
+                document.querySelector('#combination').innerHTML = "<b>Oh no bugs!</b>";
                 document.querySelector('#errors').textContent = e;
             }
         }
