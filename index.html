@@ -93,11 +93,15 @@ if (name ${b[0]} inputName) {
     };
 
     // The secret combination is the key value divided by the code value
+    if (codeValue == 0) {
+        throw "Error: Divide by zero";
+    }
     return key/codeValue;
 }
 
 // The names don't match
-return "WRONG NAME";`
+throw "Name does not match";
+return "Wrong name";`
             return sw;
         }
 
