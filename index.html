@@ -96,7 +96,11 @@ if (name ${b[0]} inputName) {
     if (codeValue == 0) {
         throw "Error: Divide by zero";
     }
-    return key/codeValue;
+    let combination = key/codeValue;
+    if (combination > 9999) {
+        throw "Too many digits. Combination: " + combination;
+    }
+    return combination;
 }
 
 // The names don't match
